@@ -51,12 +51,12 @@ Este projeto realiza uma análise comparativa do algoritmo QuickSort implementad
 
 2. **Gerar arquivos de entrada**:
    ```bash
-   python input_generator.py
+   python/python3 input_generator.py
    ```
 
 3. **Executar os testes de performance**:
    ```bash
-   python performance_test.py
+   python/python3 performance_test.py
    ```
    Este comando irá:
    - Executar o QuickSort em Python e C para cada arquivo de entrada
@@ -65,7 +65,7 @@ Este projeto realiza uma análise comparativa do algoritmo QuickSort implementad
 
 4. **Gerar análises e gráficos**:
    ```bash
-   python analysis.py
+   python/python3 analysis.py
    ```
    Este comando irá:
    - Processar os logs gerados
