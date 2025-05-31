@@ -1,97 +1,121 @@
-# Algoritmos de Ordenação - QuickSort
+# Análise Comparativa: QuickSort em Python e C
 
-Este projeto contém implementações do algoritmo QuickSort em Python e C, permitindo análises comparativas de desempenho entre as duas linguagens.
+Este projeto realiza uma análise comparativa do algoritmo QuickSort implementado em Python e C, medindo e comparando o desempenho das duas implementações com diferentes tamanhos de entrada.
 
 ## Estrutura do Projeto
 
 ```
 .
-├── input/              # Diretório para arquivos de entrada
-├── output/             # Diretório para arquivos de saída
-├── quicksort.py        # Implementação do QuickSort em Python
-├── quicksort.c         # Implementação do QuickSort em C
-├── gerador_numeros.py  # Gerador de números aleatórios
-├── Makefile            # Script de compilação para o código C
-└── README.md           
+├── input/                  # Diretório com arquivos de entrada
+│   ├── entrada_1.txt      # Arquivos com números para ordenação
+│   └── ...
+├── output/                # Diretório com resultados da ordenação
+│   ├── entrada_1_out.txt  # Arquivos com números ordenados
+│   └── ...
+├── log/                   # Diretório com logs de execução
+│   ├── log_10000.txt     # Log para entradas de tamanho 10000
+│   ├── log_100000.txt    # Log para entradas de tamanho 100000
+│   └── log_1000000.txt   # Log para entradas de tamanho 1000000
+├── analysis/             # Diretório com gráficos e análises
+│   ├── analysis_10000/   # Análises para entradas de tamanho 10000
+│   ├── analysis_100000/  # Análises para entradas de tamanho 100000
+│   ├── analysis_1000000/ # Análises para entradas de tamanho 1000000
+│   ├── tempo_medio.png   # Gráfico de tempo médio por tamanho
+│   ├── desvio_padrao.png # Gráfico de desvio padrão por tamanho
+│   ├── mediana.png      # Gráfico de mediana por tamanho
+│   ├── minimo.png       # Gráfico de mínimo por tamanho
+│   ├── maximo.png       # Gráfico de máximo por tamanho
+│   ├── amplitude.png    # Gráfico de amplitude por tamanho
+│   └── speedup.png      # Gráfico de speedup por tamanho
+├── quicksort.py         # Implementação do QuickSort em Python
+├── quicksort.c          # Implementação do QuickSort em C
+├── performance_test.py  # Script de teste de performance
+└── analysis.py         # Script de análise e geração de gráficos
 ```
+
+## Requisitos
+
+- Python 3.x
+- GCC (Compilador C)
+- Bibliotecas Python:
+  - matplotlib
+  - numpy
+  - pandas
 
 ## Como Usar
 
-### 1. Gerando Números Aleatórios
+1. **Compilar o código C**:
+   ```bash
+   gcc quicksort.c -o quicksort
+   ```
 
-Para gerar um arquivo com números aleatórios:
+2. **Gerar arquivos de entrada** (se necessário):
+   ```bash
+   python input_generator.py
+   ```
 
-```bash
-python/python3 gerador_numeros.py <tamanho_da_lista> [nome_arquivo]
-```
+3. **Executar os testes de performance**:
+   ```bash
+   python performance_test.py
+   ```
+   Este comando irá:
+   - Executar o QuickSort em Python e C para cada arquivo de entrada
+   - Gerar logs com os tempos de execução no diretório `log/`
+   - Criar um arquivo de log separado para cada tamanho de entrada
 
-Exemplo:
-```bash
-python/python3 gerador_numeros.py 1000 entrada
-```
+4. **Gerar análises e gráficos**:
+   ```bash
+   python analysis.py
+   ```
+   Este comando irá:
+   - Processar os logs gerados
+   - Criar gráficos comparativos no diretório `analysis/`
+   - Gerar análises específicas para cada tamanho de entrada
 
-Observações:
-- Se não especificar o nome do arquivo, será usado "entrada.txt"
-- A extensão .txt será adicionada automaticamente se não for fornecida
-- Os números gerados estão no intervalo de 1 a 1.000.000
-- O arquivo será salvo no diretório `input/`
+## Gráficos Gerados
 
-### 2. Executando o QuickSort em Python
+1. **Por tamanho de entrada** (em `analysis/analysis_<tamanho>/`):
+   - `execution_times.png`: Comparação dos tempos de execução Python vs C para cada arquivo
 
-```bash
-python/python3 quicksort.py <arquivo_entrada>
-```
-
-Exemplo:
-```bash
-python/python3 quicksort.py entrada.txt
-```
-
-O resultado será salvo em `output/entrada_out.txt`
-
-### 3. Executando o QuickSort em C
-
-Primeiro, compile o programa:
-```bash
-make clean && make
-```
-
-Depois execute:
-```bash
-./quicksort <arquivo_entrada>
-```
-
-Exemplo:
-```bash
-./quicksort entrada.txt
-```
-
-O resultado será salvo em `output/entrada_out.txt`
+2. **Comparativos gerais** (em `analysis/`):
+   - `tempo_medio.png`: Tempo médio de execução por tamanho
+   - `desvio_padrao.png`: Desvio padrão dos tempos por tamanho
+   - `mediana.png`: Mediana dos tempos por tamanho
+   - `minimo.png`: Tempo mínimo por tamanho
+   - `maximo.png`: Tempo máximo por tamanho
+   - `amplitude.png`: Amplitude dos tempos por tamanho
+   - `speedup.png`: Speedup (Python/C) por tamanho
 
 ## Formato dos Arquivos
 
-- **Arquivo de Entrada**: Números inteiros separados por vírgula (ex: "1,5,2,8,3")
-- **Arquivo de Saída**: Mesmos números ordenados, separados por vírgula (ex: "1,2,3,5,8")
+1. **Arquivos de entrada** (`input/entrada_*.txt`):
+   - Números inteiros separados por vírgula
+   - Sem espaços entre os números
 
-## Medição de Tempo
+2. **Arquivos de saída** (`output/entrada_*_out.txt`):
+   - Números ordenados separados por vírgula
+   - Mesmo formato dos arquivos de entrada
 
-Ambas as implementações mostram:
-- Tempo de leitura do arquivo
-- Tempo do algoritmo QuickSort
-- Tempo de escrita do arquivo
-- Tempo total de execução
+3. **Arquivos de log** (`log/log_<tamanho>.txt`):
+   - Tempos de execução para cada arquivo
+   - Estatísticas por linguagem (Python e C)
+   - Speedup calculado para cada caso
 
-## Exemplo de Uso Completo
+## Implementações
 
-```bash
-# Gera um arquivo com 1000 números
-python/python3 gerador_numeros.py 1000 teste
+Ambas as implementações (Python e C) usam a mesma estratégia do QuickSort:
+- Pivô: último elemento
+- Particionamento: elementos menores à esquerda, maiores à direita
+- Recursão: ordenação das duas partições
 
-# Ordena usando Python
-python/python3 quicksort.py teste.txt
-# Resultado em output/teste_out.txt
+## Análise de Performance
 
-# Compila e ordena usando C
-make clean && make
-./quicksort teste.txt
-# Resultado em output/teste_out.txt
+O script gera análises detalhadas comparando:
+- Tempo de execução por arquivo
+- Métricas estatísticas (média, desvio padrão, mediana, etc.)
+- Speedup entre as implementações
+
+Os gráficos permitem visualizar:
+- Diferenças de performance entre Python e C
+- Comportamento com diferentes tamanhos de entrada
+- Variabilidade dos tempos de execução
