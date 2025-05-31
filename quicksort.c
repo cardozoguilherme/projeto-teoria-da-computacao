@@ -13,7 +13,7 @@ void quicksort(int arr[], int low, int high);
 int partition(int arr[], int low, int high);
 void trocar(int* a, int* b);
 int contar_numeros(const char* filename);
-double obter_tempo(void);
+double obter_tempo_ms(void);
 char* gerar_nome_saida(const char* nome_entrada);
 char* gerar_caminho(const char* diretorio, const char* arquivo);
 
@@ -117,12 +117,12 @@ int contar_numeros(const char* filename) {
 }
 
 /**
- * @brief Retorna o tempo atual em segundos
+ * @brief Retorna o tempo atual em milissegundos
  *
- * @return Tempo em segundos
+ * @return Tempo em milissegundos
  */
-double obter_tempo(void) {
-    return (double)clock() / CLOCKS_PER_SEC;
+double obter_tempo_ms(void) {
+    return (double)clock() * 1000.0 / CLOCKS_PER_SEC;
 }
 
 /**
@@ -182,7 +182,7 @@ int main(int argc, char *argv[]) {
     double tempo_inicio, tempo_leitura = 0, tempo_algoritmo = 0, tempo_escrita = 0;
     
     // Mede tempo de leitura
-    tempo_inicio = obter_tempo();
+    tempo_inicio = obter_tempo_ms();
     
     int n = contar_numeros(arquivo_entrada);
     int* numeros = (int*)malloc(n * sizeof(int));
@@ -220,15 +220,15 @@ int main(int argc, char *argv[]) {
     }
     fclose(file);
     
-    tempo_leitura = obter_tempo() - tempo_inicio;
+    tempo_leitura = obter_tempo_ms() - tempo_inicio;
 
     // Mede tempo do algoritmo
-    tempo_inicio = obter_tempo();
+    tempo_inicio = obter_tempo_ms();
     quicksort(numeros, 0, n - 1);
-    tempo_algoritmo = obter_tempo() - tempo_inicio;
+    tempo_algoritmo = obter_tempo_ms() - tempo_inicio;
 
     // Mede tempo de escrita
-    tempo_inicio = obter_tempo();
+    tempo_inicio = obter_tempo_ms();
     
     file = fopen(caminho_saida, "w");
     if (file == NULL) {
@@ -248,15 +248,15 @@ int main(int argc, char *argv[]) {
     }
     fclose(file);
     
-    tempo_escrita = obter_tempo() - tempo_inicio;
+    tempo_escrita = obter_tempo_ms() - tempo_inicio;
     double tempo_total = tempo_leitura + tempo_algoritmo + tempo_escrita;
 
     // Imprime os resultados
     printf("\nTempos de execução (C):\n");
-    printf("Leitura do arquivo: %.6f segundos\n", tempo_leitura);
-    printf("Algoritmo QuickSort: %.6f segundos\n", tempo_algoritmo);
-    printf("Escrita do arquivo: %.6f segundos\n", tempo_escrita);
-    printf("Tempo total: %.6f segundos\n", tempo_total);
+    printf("Leitura do arquivo: %.3f ms\n", tempo_leitura);
+    printf("Algoritmo QuickSort: %.3f ms\n", tempo_algoritmo);
+    printf("Escrita do arquivo: %.3f ms\n", tempo_escrita);
+    printf("Tempo total: %.3f ms\n", tempo_total);
     printf("\nOrdenação concluída. Resultado salvo em 'output/%s'\n", arquivo_saida);
 
     free(numeros);

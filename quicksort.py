@@ -3,13 +3,7 @@
 Implementação do algoritmo QuickSort em Python.
 
 Este módulo implementa o algoritmo de ordenação QuickSort de forma equivalente
-à implementação em C. O algoritmo usa a estratégia de particionamento
-usando o último elemento como pivô.
-
-Características:
-- Ordenação in-place (modifica o array original)
-- Complexidade média: O(n log n)
-- Complexidade de espaço: O(log n) devido à recursão
+à implementação em C.
 """
 
 import sys
@@ -122,7 +116,7 @@ def main() -> None:
     Função principal do programa.
     
     Fluxo de execução:
-    1. Lê argumentos da linha de comando
+    1. Verifica argumentos da linha de comando
     2. Lê números do arquivo de entrada
     3. Ordena os números usando QuickSort
     4. Salva o resultado em arquivo
@@ -142,25 +136,25 @@ def main() -> None:
         # Mede tempo de leitura
         tempo_inicio = time.time()
         numeros = ler_arquivo(arquivo_entrada)
-        tempo_leitura = time.time() - tempo_inicio
+        tempo_leitura = (time.time() - tempo_inicio) * 1000  # Converte para ms
         
         # Mede tempo do algoritmo
         tempo_inicio = time.time()
         quicksort(numeros, 0, len(numeros) - 1)
-        tempo_algoritmo = time.time() - tempo_inicio
+        tempo_algoritmo = (time.time() - tempo_inicio) * 1000  # Converte para ms
         
         # Mede tempo de escrita
         tempo_inicio = time.time()
         salvar_arquivo(numeros, arquivo_saida)
-        tempo_escrita = time.time() - tempo_inicio
+        tempo_escrita = (time.time() - tempo_inicio) * 1000  # Converte para ms
         
         # Calcula e mostra os tempos
         tempo_total = tempo_leitura + tempo_algoritmo + tempo_escrita
         print(f"\nTempos de execução (Python):")
-        print(f"Leitura do arquivo: {tempo_leitura:.6f} segundos")
-        print(f"Algoritmo QuickSort: {tempo_algoritmo:.6f} segundos")
-        print(f"Escrita do arquivo: {tempo_escrita:.6f} segundos")
-        print(f"Tempo total: {tempo_total:.6f} segundos")
+        print(f"Leitura do arquivo: {tempo_leitura:.3f} ms")
+        print(f"Algoritmo QuickSort: {tempo_algoritmo:.3f} ms")
+        print(f"Escrita do arquivo: {tempo_escrita:.3f} ms")
+        print(f"Tempo total: {tempo_total:.3f} ms")
         print(f"\nOrdenação concluída. Resultado salvo em 'output/{arquivo_saida}'")
         
     except FileNotFoundError:

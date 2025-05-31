@@ -1,0 +1,184 @@
+================================================================================
+RELATÓRIO DE PERFORMANCE - QUICKSORT
+Data e hora do teste: 2025-05-31 16:37:28
+================================================================================
+
+INFORMAÇÕES DO SISTEMA:
+--------------------------------------------------------------------------------
+Sistema Operacional: linux
+Comando Python: python3
+
+RESULTADOS POR ARQUIVO:
+--------------------------------------------------------------------------------
+
+Arquivo: entrada_1.txt
+Python: 1565.501000 ms
+C: 198.415000 ms
+Speedup (Python/C): 7.890034x
+
+Arquivo: entrada_10.txt
+Python: 1601.687000 ms
+C: 199.291000 ms
+Speedup (Python/C): 8.036926x
+
+Arquivo: entrada_11.txt
+Python: 1486.685000 ms
+C: 197.174000 ms
+Speedup (Python/C): 7.539965x
+
+Arquivo: entrada_12.txt
+Python: 1544.988000 ms
+C: 198.970000 ms
+Speedup (Python/C): 7.764929x
+
+Arquivo: entrada_13.txt
+Python: 1527.828000 ms
+C: 197.001000 ms
+Speedup (Python/C): 7.755433x
+
+Arquivo: entrada_14.txt
+Python: 1522.681000 ms
+C: 201.757000 ms
+Speedup (Python/C): 7.547104x
+
+Arquivo: entrada_15.txt
+Python: 1792.918000 ms
+C: 201.215000 ms
+Speedup (Python/C): 8.910459x
+
+Arquivo: entrada_16.txt
+Python: 1717.902000 ms
+C: 207.120000 ms
+Speedup (Python/C): 8.294235x
+
+Arquivo: entrada_17.txt
+Python: 1841.557000 ms
+C: 202.966000 ms
+Speedup (Python/C): 9.073229x
+
+Arquivo: entrada_18.txt
+Python: 2946.740000 ms
+C: 203.618000 ms
+Speedup (Python/C): 14.471903x
+
+Arquivo: entrada_19.txt
+Python: 1621.781000 ms
+C: 199.530000 ms
+Speedup (Python/C): 8.128006x
+
+Arquivo: entrada_2.txt
+Python: 1551.296000 ms
+C: 197.444000 ms
+Speedup (Python/C): 7.856891x
+
+Arquivo: entrada_20.txt
+Python: 1571.970000 ms
+C: 198.273000 ms
+Speedup (Python/C): 7.928311x
+
+Arquivo: entrada_21.txt
+Python: 1567.636000 ms
+C: 200.113000 ms
+Speedup (Python/C): 7.833754x
+
+Arquivo: entrada_22.txt
+Python: 1569.116000 ms
+C: 198.228000 ms
+Speedup (Python/C): 7.915713x
+
+Arquivo: entrada_23.txt
+Python: 1594.742000 ms
+C: 197.810000 ms
+Speedup (Python/C): 8.061989x
+
+Arquivo: entrada_24.txt
+Python: 1578.887000 ms
+C: 197.265000 ms
+Speedup (Python/C): 8.003888x
+
+Arquivo: entrada_25.txt
+Python: 1582.365000 ms
+C: 197.335000 ms
+Speedup (Python/C): 8.018674x
+
+Arquivo: entrada_26.txt
+Python: 1580.113000 ms
+C: 198.987000 ms
+Speedup (Python/C): 7.940785x
+
+Arquivo: entrada_27.txt
+Python: 1595.690000 ms
+C: 198.356000 ms
+Speedup (Python/C): 8.044576x
+
+Arquivo: entrada_28.txt
+Python: 1603.972000 ms
+C: 200.163000 ms
+Speedup (Python/C): 8.013329x
+
+Arquivo: entrada_29.txt
+Python: 1625.980000 ms
+C: 200.863000 ms
+Speedup (Python/C): 8.094970x
+
+Arquivo: entrada_3.txt
+Python: 1556.052000 ms
+C: 196.559000 ms
+Speedup (Python/C): 7.916463x
+
+Arquivo: entrada_30.txt
+Python: 1554.387000 ms
+C: 198.444000 ms
+Speedup (Python/C): 7.832875x
+
+Arquivo: entrada_4.txt
+Python: 1523.699000 ms
+C: 194.444000 ms
+Speedup (Python/C): 7.836184x
+
+Arquivo: entrada_5.txt
+Python: 1523.240000 ms
+C: 196.728000 ms
+Speedup (Python/C): 7.742873x
+
+Arquivo: entrada_6.txt
+Python: 1488.811000 ms
+C: 196.191000 ms
+Speedup (Python/C): 7.588579x
+
+Arquivo: entrada_7.txt
+Python: 1559.523000 ms
+C: 196.353000 ms
+Speedup (Python/C): 7.942445x
+
+Arquivo: entrada_8.txt
+Python: 1526.921000 ms
+C: 198.712000 ms
+Speedup (Python/C): 7.684091x
+
+Arquivo: entrada_9.txt
+Python: 1550.408000 ms
+C: 199.899000 ms
+Speedup (Python/C): 7.755957x
+
+ESTATÍSTICAS GERAIS:
+--------------------------------------------------------------------------------
+
+Python:
+  média: 1629.169200 ms
+  desvio_padrão: 260.698523 ms
+  mediana: 1568.376000 ms
+  mínimo: 1486.685000 ms
+  máximo: 2946.740000 ms
+  amplitude: 1460.055000 ms
+
+C:
+  média: 198.974133 ms
+  desvio_padrão: 2.550942 ms
+  mediana: 198.429500 ms
+  mínimo: 194.444000 ms
+  máximo: 207.120000 ms
+  amplitude: 12.676000 ms
+
+Speedup médio (Python/C): 8.187844x
+Isso significa que, em média, a implementação em Python é 8.187844 vezes mais lenta que a implementação em C.

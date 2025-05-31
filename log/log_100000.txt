@@ -1,0 +1,184 @@
+================================================================================
+RELATÓRIO DE PERFORMANCE - QUICKSORT
+Data e hora do teste: 2025-05-31 16:50:34
+================================================================================
+
+INFORMAÇÕES DO SISTEMA:
+--------------------------------------------------------------------------------
+Sistema Operacional: linux
+Comando Python: python3
+
+RESULTADOS POR ARQUIVO:
+--------------------------------------------------------------------------------
+
+Arquivo: entrada_1.txt
+Python: 118.964000 ms
+C: 18.533000 ms
+Speedup (Python/C): 6.419036x
+
+Arquivo: entrada_10.txt
+Python: 114.844000 ms
+C: 18.403000 ms
+Speedup (Python/C): 6.240504x
+
+Arquivo: entrada_11.txt
+Python: 114.448000 ms
+C: 18.700000 ms
+Speedup (Python/C): 6.120214x
+
+Arquivo: entrada_12.txt
+Python: 113.214000 ms
+C: 18.645000 ms
+Speedup (Python/C): 6.072084x
+
+Arquivo: entrada_13.txt
+Python: 115.478000 ms
+C: 18.431000 ms
+Speedup (Python/C): 6.265422x
+
+Arquivo: entrada_14.txt
+Python: 128.372000 ms
+C: 18.663000 ms
+Speedup (Python/C): 6.878423x
+
+Arquivo: entrada_15.txt
+Python: 111.871000 ms
+C: 18.699000 ms
+Speedup (Python/C): 5.982726x
+
+Arquivo: entrada_16.txt
+Python: 115.374000 ms
+C: 18.453000 ms
+Speedup (Python/C): 6.252317x
+
+Arquivo: entrada_17.txt
+Python: 118.511000 ms
+C: 18.425000 ms
+Speedup (Python/C): 6.432076x
+
+Arquivo: entrada_18.txt
+Python: 114.769000 ms
+C: 18.347000 ms
+Speedup (Python/C): 6.255464x
+
+Arquivo: entrada_19.txt
+Python: 113.970000 ms
+C: 18.492000 ms
+Speedup (Python/C): 6.163206x
+
+Arquivo: entrada_2.txt
+Python: 118.648000 ms
+C: 18.874000 ms
+Speedup (Python/C): 6.286320x
+
+Arquivo: entrada_20.txt
+Python: 117.175000 ms
+C: 18.655000 ms
+Speedup (Python/C): 6.281158x
+
+Arquivo: entrada_21.txt
+Python: 118.159000 ms
+C: 18.846000 ms
+Speedup (Python/C): 6.269712x
+
+Arquivo: entrada_22.txt
+Python: 113.384000 ms
+C: 18.508000 ms
+Speedup (Python/C): 6.126216x
+
+Arquivo: entrada_23.txt
+Python: 117.858000 ms
+C: 18.413000 ms
+Speedup (Python/C): 6.400804x
+
+Arquivo: entrada_24.txt
+Python: 116.979000 ms
+C: 18.457000 ms
+Speedup (Python/C): 6.337921x
+
+Arquivo: entrada_25.txt
+Python: 114.750000 ms
+C: 18.401000 ms
+Speedup (Python/C): 6.236074x
+
+Arquivo: entrada_26.txt
+Python: 113.773000 ms
+C: 18.381000 ms
+Speedup (Python/C): 6.189707x
+
+Arquivo: entrada_27.txt
+Python: 115.213000 ms
+C: 18.523000 ms
+Speedup (Python/C): 6.219997x
+
+Arquivo: entrada_28.txt
+Python: 114.967000 ms
+C: 19.031000 ms
+Speedup (Python/C): 6.041038x
+
+Arquivo: entrada_29.txt
+Python: 110.945000 ms
+C: 18.294000 ms
+Speedup (Python/C): 6.064557x
+
+Arquivo: entrada_3.txt
+Python: 117.017000 ms
+C: 18.131000 ms
+Speedup (Python/C): 6.453974x
+
+Arquivo: entrada_30.txt
+Python: 121.521000 ms
+C: 18.675000 ms
+Speedup (Python/C): 6.507149x
+
+Arquivo: entrada_4.txt
+Python: 122.858000 ms
+C: 18.604000 ms
+Speedup (Python/C): 6.603849x
+
+Arquivo: entrada_5.txt
+Python: 121.492000 ms
+C: 18.623000 ms
+Speedup (Python/C): 6.523761x
+
+Arquivo: entrada_6.txt
+Python: 114.746000 ms
+C: 18.756000 ms
+Speedup (Python/C): 6.117829x
+
+Arquivo: entrada_7.txt
+Python: 116.559000 ms
+C: 18.538000 ms
+Speedup (Python/C): 6.287571x
+
+Arquivo: entrada_8.txt
+Python: 119.372000 ms
+C: 18.675000 ms
+Speedup (Python/C): 6.392075x
+
+Arquivo: entrada_9.txt
+Python: 116.079000 ms
+C: 18.659000 ms
+Speedup (Python/C): 6.221073x
+
+ESTATÍSTICAS GERAIS:
+--------------------------------------------------------------------------------
+
+Python:
+  média: 116.710333 ms
+  desvio_padrão: 3.561851 ms
+  mediana: 115.778500 ms
+  mínimo: 110.945000 ms
+  máximo: 128.372000 ms
+  amplitude: 17.427000 ms
+
+C:
+  média: 18.561167 ms
+  desvio_padrão: 0.187463 ms
+  mediana: 18.535500 ms
+  mínimo: 18.131000 ms
+  máximo: 19.031000 ms
+  amplitude: 0.900000 ms
+
+Speedup médio (Python/C): 6.287877x
+Isso significa que, em média, a implementação em Python é 6.287877 vezes mais lenta que a implementação em C.

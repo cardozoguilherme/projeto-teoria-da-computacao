@@ -22,3 +22,11 @@ Thumbs.db
 .idea/
 *.swp
 *.swo 
+
+# Ambiente virtual Python
+venv/
+env/
+.env/
+.venv/
+__pycache__/
+*.pyc 
