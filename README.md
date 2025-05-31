@@ -46,10 +46,10 @@ Este projeto realiza uma análise comparativa do algoritmo QuickSort implementad
 
 1. **Compilar o código C**:
    ```bash
-   gcc quicksort.c -o quicksort
+   make clean && make
    ```
 
-2. **Gerar arquivos de entrada** (se necessário):
+2. **Gerar arquivos de entrada**:
    ```bash
    python input_generator.py
    ```
