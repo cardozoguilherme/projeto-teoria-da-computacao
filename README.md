@@ -46,7 +46,7 @@ Este projeto realiza uma análise comparativa do algoritmo QuickSort implementad
 
 1. **Compilar o código C**:
    ```bash
-   make clean && make
+   make clean && make OU gcc quicksort.c -o quicksort
    ```
 
 2. **Gerar arquivos de entrada**:
